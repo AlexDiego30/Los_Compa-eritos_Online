@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body {
+    background-color: #FBF8EF;
+    color: #434344;
+    font-family: "Acme", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #FFB145 !important;
+    font-family: "Acme", sans-serif;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadido para una sombra sutil */
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-family: "Acme", sans-serif;
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .logo {
+    height: 70px;
+    background-color: #FBF8EF;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand .logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4AD4BF !important; /* Cambio de color al pasar el cursor */
+}
+
+/* CARDS */
+.custom-card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px; /* Bordes redondeados para un aspecto más suave */
+    overflow: hidden; /* Para evitar que los contenidos salgan de los bordes */
+    margin-bottom: 30px; /* Mayor separación entre las tarjetas */
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+    height: 550px; /* Incrementado el tamaño de las imágenes */
+}
+
+.custom-card .card-body {
+    background-color: #4AD4BF;
+    text-align: center;
+    color: #434344;
+    padding: 20px;
+    flex-grow: 1;
+    margin-bottom: 20px; /* Separación entre las tarjetas */
+    border-bottom: 2px solid #FBF8EF; /* Línea de separación sutil */
+}
+
+.custom-card .card-body h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #434344;
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.custom-card .card-body p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #434344;
+    margin-bottom: 15px; /* Espacio debajo de la descripción */
+}
+
+.custom-card .card-body button {
+    background-color: #FFB145;
+    border: none;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-card .card-body button:hover {
+    background-color: #FF8F00;
+}
+
+/* FOOTER */
+footer {
+    background-color: #FFB145;
+    color: #ffffff;
+    font-family: "Acme", sans-serif;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra para separar el footer */
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 20px;
+    }
+
+    .navbar-brand {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-brand .logo {
+        height: 60px;
+        margin-bottom: 5px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .custom-card {
+        margin-bottom: 20px; /* Mayor separación entre las tarjetas en pantallas pequeñas */
+    }
+
+    .custom-card .card-body {
+        padding: 15px; /* Menor padding para pantallas pequeñas */
+    }
+}
